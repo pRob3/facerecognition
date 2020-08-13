@@ -12,12 +12,19 @@ import './App.css';
 
 
 const particlesOptions = {
-  particles: {
-    number: {
-      value: 50,
-      density: {
-        enable: true,
-        value_area: 500
+  "particles": {
+    "number": {
+      "value": 150
+    },
+    "size": {
+      "value": 3
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
       }
     }
   }
@@ -92,7 +99,7 @@ class App extends Component {
   render() {
     // destructuring props
     const { isSignedIn, imageUrl, route, box } = this.state;
-    
+
     return (
       <div className="App">
         <Particles className='particles'
